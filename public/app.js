@@ -18,7 +18,7 @@ function timer()
         ms = 0
         
     }
-    else if(sec >= 6)
+    else if(sec >= 60)
         {
             sec = 0
             min++
@@ -51,10 +51,33 @@ function reset()
 
 }
 
+
+function lapTime()
+{
+    return min + ' : ' + sec + ' : ' + ms
+}
+
+var count = 0
+
 function lap()
 {
-    s = document.createElement('h2')
-    s = s.innerHTML = 'hhhhh'
-    col = document.getElementsByTagName('h2')
-    col.style.color = 'red'
+    count++
+
+    row = document.createElement('tr')
+
+    data = document.createElement('td')
+    data.innerHTML = 'Lap ' + count + ': '
+
+    data2 = document.createElement('td')
+    data2.innerHTML = ''
+
+
+    data3 = document.createElement('td')
+    data3.innerHTML = lapTime()
+
+    ROW = document.getElementById('lapList').appendChild(row)
+
+    ROW.appendChild(data)
+    ROW.appendChild(data2)
+    ROW.appendChild(data3)
 }

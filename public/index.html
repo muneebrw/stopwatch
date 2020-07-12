@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <title>Stop Watch</title>
 </head>
 <body>
     <section>
+        <h3 id="heading"> Stop Watch </h3>
         <div>
             <h1 id="min" style="display: inline-block;">00</h1>
             <h1 id="sec" style="display: inline-block;">00</h1>
@@ -21,10 +23,13 @@
             <button onclick="lap()">lap</button>
         </div>
 
-        <div id="lapDiv">
-            <h2> </h2>
+    <div>
+        <table id="lapList" style="margin: auto;">
+            
 
-        </div>
+        </table>
+    </div>
+    
     </section>
 
 <script src="app.js"></script>    
